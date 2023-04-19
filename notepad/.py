@@ -35,4 +35,29 @@ def print_notes():
     else:
         print("Список заметок пуст.")
 
+        
+def main():
+    while True:
+        print("Меню:")
+        print("1. Добавить заметку")
+        print("2. Редактировать заметку")
+        print("3. Удалить заметку")
+        print("4. Показать все заметки")
+        print("5. Выйти")
+        choice = input("Введите номер действия: ")
+        if choice == "1":
+            add_note()
+        elif choice == "2":
+            edit_note()
+        elif choice == "3":
+            delete_note()
+        elif choice == "4":
+            print_notes()
+        elif choice == "5":
+            break
+        else:
+            print("Некорректный ввод. Попробуйте еще раз.")
 
+
+if __name__ == '__main__':
+    main()
